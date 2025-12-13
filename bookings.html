@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Customer Orders</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/bookings.css">
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="title-block">
+        <h1>Customer Orders</h1>
+        <p class="subtitle">All pickup bookings stored in localStorage (key: <code>lm_bookings</code>).</p>
+      </div>
+
+      <div class="controls">
+        <input id="searchInput" type="search" placeholder="Search by name, phone, service, id..." />
+        <select id="sortSelect" title="Sort orders">
+          <option value="newest">Sort: Newest</option>
+          <option value="oldest">Sort: Oldest</option>
+          <option value="amount-desc">Amount ↓</option>
+          <option value="amount-asc">Amount ↑</option>
+        </select>
+        <button id="exportBtn" class="btn primary">Export CSV</button>
+        <button id="clearBtn" class="btn danger">Clear All</button>
+      </div>
+    </header>
+
+    <section class="cards-grid" id="cardsGrid">
+    
+      <div class="card summary">
+        <small>Total bookings</small>
+        <div id="totalCount" class="big">0</div>
+      </div>
+
+      <div class="card summary">
+        <small>Revenue (sum)</small>
+        <div id="totalRevenue" class="big">₹0</div>
+      </div>
+
+      <div class="card summary">
+        <small>Unique Customers</small>
+        <div id="uniqueCustomers" class="big">0</div>
+      </div>
+
+      <div class="card summary">
+        <small>Latest booking</small>
+        <div id="latestBooking" class="big">—</div>
+      </div>
+    </section>
+
+    <section class="table-wrap">
+      <table id="bookingsTable" class="glass-table" aria-label="Bookings table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Services (count)</th>
+            <th>Pickup</th>
+            <th>Total</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+
+      <div id="emptyState" class="empty-state" hidden>
+        <img src="https://i.ibb.co/8x2Tm2Z/support.png" alt="" width="90" />
+        <h3>No bookings found</h3>
+        <p>Bookings saved by the schedule-pickup popup will appear here.</p>
+      </div>
+    </section>
+  </main>
+
+ 
+  <div id="detailModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="detailTitle">
+    <div class="modal-panel">
+      <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+      <h3 id="detailTitle">Booking Details</h3>
+      <div id="detailContent" class="detail-content"></div>
+      <div class="modal-actions">
+        <button id="modalDelete" class="btn danger">Delete Booking</button>
+        <button id="modalCloseBtn" class="btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/bookings.js" defer></script>
+</body>
+</html>

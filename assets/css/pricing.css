@@ -1,0 +1,697 @@
+/* ================================
+   GLOBAL STYLE
+================================ */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+/* ================================
+   HEADER
+================================ */
+.header {
+    height: 10vh;
+    width: 100%;
+    background: #00224f;
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+.logo {
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.username a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: #00224f;
+    background-color: white;
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.username a:hover {
+    transform: translateY(-3px);
+    background-color: #008fdd;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: rgb(255, 254, 254);
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.nav li a:hover {
+    color: #0ca2ff;
+    border-bottom: 2px solid #0ca2ff;
+    padding-bottom: 3px;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 120px;
+    background: #FFF7E3;
+    background-image: url('curve-bg.png');
+    background-size: cover;
+}
+
+.hero-left {
+    animation: slideslide 1.5s ease-in-out;
+    margin-left: 200px;
+    max-width: 600px;
+}
+@keyframes slideslide {
+    0%{
+        transform: translateX(-900px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.hero-left h1 {
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: 750;
+    color: #08335D;
+    line-height: 1.2;
+}
+
+.hero-left h1 span {
+    color: #FFCA2C;
+}
+
+.sub-text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #08335D;
+}
+.location-box{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* location Button */
+.location-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background: #FFD240;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #08335D;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 3px solid #FFCA2C;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(255,199,31,0.3);
+}
+
+.location-btn {
+    perspective: 800px;
+}
+
+.location-btn i {
+    margin-left: 15px;
+    margin-right: 8px;
+    width: 22px;
+    display: inline-block;
+    animation: spinY 1.8s linear infinite;
+}
+
+@keyframes spinY {
+    0%   { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+
+   
+
+/* Features */
+.hero-features {
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature img{
+    width: 66px;
+}
+
+.feature p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #08335D;
+}
+.hero-features i{
+    font-size: 30px;
+}
+.hero-right{
+    animation: slideup 1.5s ease-in-out ;
+
+}
+
+/* Right image */
+.hero-right img {
+    margin-right:150px;
+    margin-bottom: -63px;
+    width: 420px;
+    
+    
+}
+
+@keyframes slideup {
+    0%{
+        transform: translateX(900px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* ================================
+   PRICING SECTION – LAUNDRY ONLY
+================================ */
+#laundry-pricing {
+     
+    border-top: #002B5B 4px solid;
+    border-bottom: #FFA500 4px solid;
+    padding: 30px 20px;
+    background: #fafafa;
+}
+
+#laundry-pricing .pricing-main-title {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 38px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 48px;
+    margin-right: 48px;
+    background-color: #002B5B;
+    font-weight: 700;
+    color: #f3f6f9;
+    border-radius: 13px;
+}
+
+#laundry-pricing .pricing-sub {
+    text-align: center;
+    font-size: 25px;
+    color: #FFA500;
+    margin-bottom: 30px;
+}
+
+/* Laundry Grid */
+#laundry-pricing .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 95%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/* Laundry Cards */
+#laundry-pricing .pricing-section {
+    background: white;
+    padding: 0;
+    border-radius: 14px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+}
+
+ 
+.pricing-section h3 {
+    background: #002B5B;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 14px 0;
+    border-radius: 14px 14px 0 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* ================================
+   PRICING SECTION – STEAM IRON ONLY
+================================ */
+#steam-iron-pricing {
+    border-bottom: #FFA500 4px solid;
+    padding: 30px 20px;
+    background: #ffffff;
+}
+
+#steam-iron-pricing .pricing-main-title {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 800;
+    color: #002B5B;
+    margin-top: 10px;
+}
+
+#steam-iron-pricing .pricing-sub {
+    text-align: center;
+    font-size: 25px;
+    color: #FFA500;
+    margin-bottom: 30px;
+    padding-top: 5px;
+}
+
+/* Steam Iron Grid */
+#steam-iron-pricing .pricing-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 95%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/* Steam Iron Cards */
+#steam-iron-pricing .price-table {
+    background: white;
+    
+    border-radius: 14px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+}
+
+/* TABLE TITLE HEADER (Blue Rounded Bar) */
+.table-title,
+.pricing-section h3 {
+    background: #002B5B;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 14px 0;
+    border-radius: 14px 14px 0 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+ 
+/* ================================
+    table style
+================================ */
+table {
+    width: 100%;                  /* full width inside card */
+    
+    border-collapse: collapse;
+    
+    table-layout: fixed;          /* equal column width */
+}
+
+/* Borders */
+table, th, td {
+    border: 1px solid #d0d0d0;
+}
+
+/* Header */
+thead th {
+    background: #002B5B;
+    color: white;
+    padding: 12px 10px;
+    font-size: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Yellow header column */
+thead th:last-child {
+    background: #FFD54A;
+    color: #222;
+    font-weight: 700;
+}
+
+/* Body cells */
+td {
+    padding: 12px 10px;
+    font-size: 15px;
+    color: #333;
+    vertical-align: middle;
+}
+
+/* Yellow column cells */
+td:last-child {
+    background: #FFF4BE;
+    font-weight: 700;
+    color: #000;
+}
+
+/* Hover */
+tbody tr:hover {
+    background: #f5f9ff;
+}
+
+/* Remove extra spacing inside card */
+.pricing-section table,
+.price-table table {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Reduce yellow column width */
+table td:last-child,
+table th:last-child {
+    width: 33%;
+}
+
+
+/* ================================
+   TERMS SECTION
+================================ */
+#terms-section {
+    text-align: left;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background: #fff;
+}
+
+.terms-wrapper {
+    max-width: 900px;
+    margin: auto;
+}
+
+.terms-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0A2A53;
+}
+
+.terms-title span {
+    color: #FFC72C;
+}
+
+.terms-list {
+    list-style: decimal;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+/* FOOTER SECTION */
+.footer {
+  justify-content: center;
+    align-items: center;
+    /* height: 80vh; */
+    background: #110e2d;
+    padding: 0px 80px;
+    font-family: Arial, sans-serif;
+    display: grid;
+}
+
+ 
+.footer-top {
+    
+    border-bottom: 1px solid #f5f2f2;
+    display: flex;
+    justify-content:center ;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 15px 30px;
+}
+
+.col-left{
+  margin-right: 200px;
+}
+.logo{
+  border-bottom: #f4f0f0b1 1px solid;
+
+}
+
+.icons{
+  display: flex;
+  color: white;
+  margin-top: 10px;
+  
+}
+.col-left p{
+  color: white;
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+ 
+
+ 
+.icons i{
+  margin-left: 20px;
+  font-size: 1.5rem;
+  
+  margin-top: 2px;
+  
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+ .col{
+  width: 10%;
+ }
+
+
+.col p {
+  line-height: 1.6;
+  margin-left: 1px;
+  font-size: 17px;
+  color: white;
+  padding-top: 5px;;
+}
+.col-contact h3{
+  margin-left: 10px;
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  
+}
+.col-contact p{
+  line-height: 1.6;
+  margin-left: 10px;
+  font-size: 17px;
+  color: white;
+  padding-top: 5px;
+}
+
+.col-contact i{
+  margin-right: 10px;
+}
+.col-company h3{
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  
+}
+ 
+
+.col-company p{
+  line-height: 1.6;
+ 
+  font-size: 17px;
+  color: white;
+  padding-top: 5px;
+}
+
+.col-company a{
+  line-height: 1.6;
+ 
+  font-size: 17px;
+  color: white;
+  padding-top: 5px;
+}
+ 
+ 
+
+.icons span {
+    width: 15px;
+    height: 15px;
+    background: white;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+ 
+.col h3 {
+     
+    color: white;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+ 
+.footer-section {
+   border-bottom: white 1px solid;;
+    text-align: center;
+    margin-top: 40px;
+   
+}
+
+.footer-section h2 {
+    color:  white;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+     margin-bottom: 30px;
+   
+}
+.footer-section .coming-soon  {
+    color: rgba(253, 251, 251, 0.574);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+     margin-bottom: 30px;
+   
+}
+ 
+ 
+
+ 
+.footer-bottom {
+padding-bottom: 10px;
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 3px;
+  margin-top: 30px;
+}
+
+.right{
+  text-align: right;
+}
+.left{
+  text-align: left;
+ 
+}
+.footer-bottom p {
+    background-color: #110e2d;
+     
+    margin-bottom: 1px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.footer-bottom a {
+
+    background-color: #110e2d;
+     
+    margin-bottom: 1px;
+    color: white;
+    font-size: 0.9rem;
+    
+}
+
+
+
+
+
+/* ================================
+   SHOES TABLE — CENTERED CARD
+================================ */
+/* Center the entire Shoes card */
+.pricing-section.shoes {
+    grid-column: 1 / -1;      /* take full row in grid */
+    display: flex;
+    justify-content: center;  /* center horizontally */
+    width: 100%;
+    margin: 0 auto;
+}
+
+ 
+.pricing-section.shoes .price-table,
+.pricing-section.shoes .table-title {
+    margin: 0 auto;
+}
+
+/* Keep card compact */
+.pricing-section.shoes {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Prevent stretching table */
+.pricing-section.shoes table {
+    width: auto !important;
+    min-width: 0;
+    margin: 0 auto;
+}
+
+/* Prevent text wrapping */
+.pricing-section.shoes th,
+.pricing-section.shoes td {
+    white-space: nowrap;
+}
+.back-btn {
+   
+    margin: 40px 0 30px 0;
+    text-align: center;
+}
+
+.back-btn a {
+    
+    display: inline-block;
+    background: #002B5B;         
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.back-btn a:hover {
+    background: #004080;         
+    transform: translateX(-3px);
+}
+
