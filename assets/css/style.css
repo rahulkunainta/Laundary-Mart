@@ -1425,6 +1425,194 @@ color: #0d2440;
     font-size: 0.9rem;
     
 }
+/* =============================
+   GLOBAL RESPONSIVE FIXES
+============================= */
+* {
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  overflow-x: hidden;
+}
+
+
+@media (min-width: 1400px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  .hero {
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  .main-section,
+  .features-section,
+  .serviceses {
+    height: auto;
+    padding: 100px 10%;
+  }
+}
+
+
+
+@media (max-width: 1200px) {
+
+  .hero {
+    margin-left: 0;
+    gap: 60px;
+  }
+
+  .services-title {
+    padding: 40px 40px;
+  }
+
+  .stats-grid {
+    gap: 60px;
+  }
+
+  .footer {
+    height: auto;
+  }
+}
+
+
+
+@media (max-width: 992px) {
+
+  .navbar {
+    margin-left: 0;
+    padding: 0 20px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .services-title {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+
+  .delivery-boxes,
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main-section {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .laundry-process {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .username a {
+    margin-right: 0;
+  }
+
+  /* HERO */
+  .hero-section {
+    padding: 40px 20px;
+  }
+
+  .left h1 {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .right img {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+
+  /* SERVICES */
+  .serviceses {
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  /* STATS */
+  .stats-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* FOOTER */
+  .footer-top {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .col-left {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+
+  .left h1 {
+    font-size: 1.9rem;
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+  }
+
+  .pickup-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .review-card {
+    min-width: 220px;
+  }
+}
+
 
 
 
